@@ -14,9 +14,13 @@ be back to normal.
 
 Developed for/tested with Drupal 6.
 
-Shameless ripoff of WP-SOPA-Blackout:
+Inspired by WP-SOPA-Blackout:
 
   https://github.com/chrisguitarguy/WP-SOPA-Blackout
+
+SOPA template from:
+
+  http://www.zachstronaut.com/lab/text-shadow-box/stop-sopa.html
 
 Let me know if there's any problems with this version.
 
