@@ -4,7 +4,8 @@ This module does just that, via a quick hack.
 
 Your site will work normally until January 18, but on January 18 you
 will only be able to access URLs starting with "user" and "admin"
-without seeing the SOPA blackout page.
+without seeing the SOPA blackout page. After January 18 your site will
+be back to normal.
 
 Developed for/tested with Drupal 6.
 
