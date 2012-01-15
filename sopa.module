@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * Onerous hackin' time!
+ */
+$on_admin_page = strpos($_REQUEST['q'], 'admin') === 0;
+$on_user_page  = strpos($_REQUEST['q'], 'user') === 0;
+
+if ($_GET['sopa_test'] || !($on_admin_page || $on_user_page)) {
+  if ($_GET['sopa_test'] || date('Y-m-d') == '2012-01-18') {
+    $path_to_static = '/'. drupal_get_path('module', 'sopa') .'/template';
+    print sopa_return_template_html('sopa', 'page.tpl.php', array(
+      'path_to_static' => $path_to_static
+    ));
+    exit();
+  }
+}
+
+/**
+ * Implementation of hook_help().
+ */
+function sopa_help($section = '') {
+
+  $output= '';
+
+  switch ($section)  {
+
+    case "admin/modules#description":
+      $output = t("Block out your site on January 18, 2012.");
+      break;
+
+    case "admin/help":
+      $output = t("Block out your site on January 18, 2012.");
+      break;
+  }
+
+  return $output;
+}
+
+function sopa_return_template_html($module, $template, $variables = array()) {
+  // Create local copies of variables passed to template
+  if (is_array($variables)) {
+    reset($variables);
+    while (list($key, $value) = each($variables)) {
+      $$key = $value;
+    }
+  }
+
+  // Use output buffering to capture included template output
+  ob_start();
+  if ($module) {
+    include(drupal_get_path('module', $module) .'/template/'. $template);
+  }
+
+  $output = ob_get_contents();
+  ob_end_clean();
+
+  return $output;
+}
