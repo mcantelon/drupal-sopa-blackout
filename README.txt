@@ -1,6 +1,7 @@
-Blackout your Drupal site on January 18, 2012!
+Blackout your Drupal site on January 18, 2012 as part of the global
+anti-SOPA protest!
 
-This module does just that, via a quick hack.
+This module automates this via a quick hack.
 
 Your site will look like:
 
