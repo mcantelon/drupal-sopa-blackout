@@ -7,7 +7,7 @@ $on_admin_page = isset($_REQUEST['q']) && strpos($_REQUEST['q'], 'admin') === 0;
 $on_user_page  = isset($_REQUEST['q']) && strpos($_REQUEST['q'], 'user') === 0;
 
 if (isset($_GET['sopa_test']) || !($on_admin_page || $on_user_page)) {
-  if (isset($_GET['sopa_test']) || date('Y-m-d') == '2012-01-16') {
+  if (isset($_GET['sopa_test']) || date('Y-m-d') == '2012-01-18') {
     print file_get_contents(dirname(__FILE__) .'/template/sopa.html');
     exit();
   }
