@@ -12,7 +12,9 @@ will only be able to access URLs starting with "user" and "admin"
 without seeing the SOPA blackout page. After January 18 your site will
 be back to normal.
 
-Developed for/tested with Drupal 6.
+Developed for/tested with Drupal 6 or Drupal 7. If using it with Drupal 7
+just change the version numbers in the sopa.info file and you should be
+good to go.
 
 Inspired by WP-SOPA-Blackout:
 
