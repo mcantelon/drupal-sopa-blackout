@@ -1,5 +1,6 @@
 Blackout your Drupal site on January 18, 2012 as part of the global
-anti-SOPA protest!
+anti-SOPA/PIPA protest! Politicians have reportedly backed down on
+SOPA, but PIPA still remains so best to proceed with the blackout.
 
 This module automates this via a quick hack.
 
