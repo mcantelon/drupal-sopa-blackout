@@ -1,33 +1,35 @@
 <?php
+/**
+ * @file sopa.module
+ * Black out your site on Jan 18, 2012 in protest of SOPA.
+ */
 
 /**
- * Onerous hackin' time!
+ * Implements hook_init().
  */
-$on_admin_page = strpos($_SERVER['REQUEST_URI'], 'admin') === 1;
-$on_user_page = strpos($_SERVER['REQUEST_URI'], 'user') === 1;
+function sopa_init() {
+  // Onerous hackin' time!
+  $on_admin_page = strpos($_SERVER['REQUEST_URI'], 'admin') === 1;
+  $on_user_page = strpos($_SERVER['REQUEST_URI'], 'user') === 1;
 
-if (isset($_GET['sopa_test']) || !($on_admin_page || $on_user_page)) {
-  if (isset($_GET['sopa_test']) || date('Y-m-d') == '2012-01-18') {
-    // Preserve SE ranking. @see http://drupal.org/node/1405892#comment-5481540
-    header('HTTP/1.1 503 Service Temporarily Unavailable');
-    header('Retry-After: Thu, 19 Jan 2012 00:00:00 GMT');
-    print file_get_contents(dirname(__FILE__) .'/template/sopa.html');
-    exit();
+  if (isset($_GET['sopa_test']) || !($on_admin_page || $on_user_page)) {
+    if (isset($_GET['sopa_test']) || date('Y-m-d') == '2012-01-18') {
+      // Preserve SE ranking. @see http://drupal.org/node/1405892#comment-5481540
+      header('HTTP/1.1 503 Service Temporarily Unavailable');
+      header('Retry-After: Thu, 19 Jan 2012 00:00:00 GMT');
+      print file_get_contents(dirname(__FILE__) .'/template/sopa.html');
+      exit();
+    }
   }
 }
 
 /**
- * Implementation of hook_help().
+ * Implements hook_help().
  */
-function sopa_help($section = '') {
-  $output= '';
-
-  switch ($section)  {
-    case "admin/modules#description":
-    case "admin/help":
-      $output = t("Block out your site on January 18, 2012.");
+function sopa_help($path, $arg) {
+  switch ($path)  {
+    case "admin/help#sopa":
+      return t("Block out your site on January 18, 2012.");
       break;
   }
-
-  return $output;
 }
