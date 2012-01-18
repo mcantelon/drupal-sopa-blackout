@@ -1,4 +1,4 @@
 name = Sopa Blackout
 description = Black out your site on Jan 18, 2012 in protest of SOPA.
-version 6.x-1.0
+version = 6.x-1.0
 core = 6.x
