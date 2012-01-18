@@ -21,21 +21,15 @@ function sopa_init() {
       exit();
     }
   }
-  
 }
 
 /**
  * Implements hook_help().
  */
-function sopa_help($section = '') {
-  $output= '';
-
-  switch ($section)  {
-    case "admin/modules#description":
-    case "admin/help":
-      $output = t("Block out your site on January 18, 2012.");
+function sopa_help($path, $arg) {
+  switch ($path)  {
+    case "admin/help#sopa":
+      return t("Block out your site on January 18, 2012.");
       break;
   }
-
-  return $output;
 }
