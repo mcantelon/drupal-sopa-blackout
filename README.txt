@@ -23,7 +23,7 @@ If you're new to GitHub here are some quick instructions:
 
 1. Go to https://github.com/mcantelon/drupal-sopa-blackout/zipball/master
 2. Unzip the resulting file and you should get a folder
-3. Rename this folder to sopa
+3. Rename this folder to "sopa"
 4. In the folder, edit the "sopa.info" file changing the Drupal version to
    match your version (6 or 7)
 5. Put the folder in your sites/all/modules directory
