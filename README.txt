@@ -19,6 +19,16 @@ Edit sopa.info and change to your preferred core version or:
 * D6: checkout 6.x-1.x
 * D7: checkout 7.x-1.x
 
+If you're new to GitHub here are some quick instructions:
+
+1. Go to https://github.com/mcantelon/drupal-sopa-blackout/zipball/master
+2. Unzip the resulting file and you should get a folder
+3. Rename this folder to sopa
+4. In the folder, edit the "sopa.info" file changing the Drupal version to
+   match your version (6 or 7)
+5. Put the folder in your sites/all/modules directory
+6. Enable the module through the Drupal web administration interface
+
 Inspired by WP-SOPA-Blackout:
 
   https://github.com/chrisguitarguy/WP-SOPA-Blackout
